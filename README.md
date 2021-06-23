@@ -36,15 +36,18 @@ The below content will explain what each section of this code does and more in d
 
 ### Anchors
 
-The characters `^` and `$` are both considered to be anchors.The `^` anchor signifies a string that begins with the characters that follow it. This could be in one of two formats:
+The characters `^` and `$` are both considered to be anchors.The `^` anchor signifies a string that
+ begins with the characters that follow it. This could be in one of two formats:
 * An exact string match or
 * A range of possible aches, displayed using bracket expressions.
-The `$` anchor signifies a string that ends with the characters that precede it. As with the `^` character, it can be preceded by an exact string or a range of possible matches. 
+The `$` anchor signifies a string that ends with the characters that precede it. As with the `^` character, 
+it can be preceded by an exact string or a range of possible matches. 
 
 ### Quantifiers
 
 Set the limits of the string that your regex matches. They frequently include the minimum and maximum number
-of characters that your regex is looking for. Quantifiers are inherently greedy, meaning they match as many occurrences of particular patterns as possible. 
+of characters that your regex is looking for. Quantifiers are inherently greedy, meaning they match as many 
+occurrences of particular patterns as possible. 
 They include the following:
 
 `*`—Matches the pattern zero or more times
@@ -68,16 +71,19 @@ preceding string pattern a minimum of 2 times and a maximum of 6 times.
 The “Matching an Email” regex is fairly straightforward and open-ended about what it accepts. As regular 
 expressions grow more complicated, you may check multiple parts of a string to determine that different 
 sections fulfill different requirements. To break these sections up, you'll need to use grouping constructs.
-The primary way you group a section of a regex is by using parentheses `()`. Each section within parentheses is known as a subexpression. Our exaple:`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` have 
-three group: `([a-z0-9_\.-]+)`, `([\da-z\.-]+)`, and `([a-z\.]{2,6})$/`
+The primary way you group a section of a regex is by using parentheses `()`. Each section within parentheses 
+is known as a subexpression. Our exaple:`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` have 
+three group: `([a-z0-9_\.-]+)`, `([\da-z\.-]+)`, and `([a-z\.]{2,6})$/`.
 
 ### Bracket Expressions
 
 Anything inside a set of square brackets `[]` represents a range of characters that we want to match. These 
 patterns are known as bracket expressions, but they are also known as a positive character group, because they 
-outline the characters we want to include. We can write these expressions to include all of the characters we want to match.
+outline the characters we want to include. We can write these expressions to include all of the characters we 
+want to match.
 In our “Matching an Email” regex example:
-*  `[a-z0-9_\.-]`—The string can contain any lowercase letter between `a–z`, any numbers b/n 0-9, underlines `_`, dots `.`, and hyphens `-`. 
+*  `[a-z0-9_\.-]`—The string can contain any lowercase letter between `a–z`, any numbers b/n 0-9, underlines `_`, 
+    dots `.`, and hyphens `-`. 
 *  `[\da-z\.-]`—The string can contain any number between `0–9`, any lowercase `a-z`, dots`.`, and hyphens`(-)`.
 *  `[a-z\.]`-Has any lowercase `a-z` and dots `.`.
 
@@ -110,12 +116,12 @@ or a whole expression. There are none in our example.
 Flags will always follow the closing forward slash charactors of an expression, and change how it is interpreted.
 There are no flags in our example; however, the following are some examples with `g`, `i`, & `m` are the three you're most 
 likely to encounter:
-* Ignore case i will make the entire expression case-sensitive.
-* Global search g will store the index of the last match.
-* Multiline m will cause the beginning and end anchors to match the start and end of a line instead of the     whole string.
-* Unicode u allows extended unicode escapes in the form \x{FFFFF}.
-* Sticky y will only match from its last index position and ignores the global search flag.
-* Dot all s causes dot (.) to match any character.
+* Ignore case `i` will make the entire expression case-sensitive.
+* Global search `g` will store the index of the last match.
+* Multiline `m` will cause the beginning and end anchors to match the start and end of a line instead of the     whole string.
+* Unicode `u` allows extended unicode escapes in the form \x{FFFFF}.
+* Sticky `y` will only match from its last index position and ignores the global search flag.
+* Dot all s causes dot `(.)` to match any character.
 
 ### Character Escapes
 
@@ -126,6 +132,25 @@ The backslash (\) in a regex escapes a character that otherwise would be interpr
 Dereje Ayele: University of Richmond Coding Bootcamp Student                                                 
 GitHub: https://github.com/dereatom
 
+## Screen Shots
+![Capture](https://user-images.githubusercontent.com/77940481/123028730-e59ce600-d3ad-11eb-88f1-456376887d37.JPG)
+![Capture2](https://user-images.githubusercontent.com/77940481/123028735-e7ff4000-d3ad-11eb-8cf4-3dd0e6b310bf.JPG)
+![Capture3](https://user-images.githubusercontent.com/77940481/123028746-e9c90380-d3ad-11eb-9593-d5ac33da5c7a.JPG)
+![Capture4](https://user-images.githubusercontent.com/77940481/123028752-eb92c700-d3ad-11eb-940b-bc42ee804482.JPG)
+![Capture5](https://user-images.githubusercontent.com/77940481/123028761-efbee480-d3ad-11eb-9a8b-50f340fd69ee.JPG)
+
+## Acceptance Criteria
+
+```md
+GIVEN a regex tutorial
+WHEN I open the tutorial
+THEN I see a descriptive title and introductory paragraph explaining the purpose of the tutorial, a summary describing the regex featured in the tutorial, a table of contents linking to different sections that break down each component of the regex and explain what it does, and a section about the author with a link to the author’s GitHub profile
+WHEN I click on the links in the table of contents
+THEN I am taken to the corresponding sections of the tutorial
+WHEN I read through each section of the tutorial
+THEN I find a detailed explanation of what a specific component of the regex does
+WHEN I reach the end of the tutorial
+THEN I find a section about the author and a link to the author’s GitHub profile
 ### Referances
 
 https://www.youtube.com/watch?v=7DG3kCDx53c
