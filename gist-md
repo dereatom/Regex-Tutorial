@@ -6,6 +6,18 @@ As a web development student, I want develope a tutorial explaining a specifics 
 
 A Regex or regular expression is a sequence of characters that define a search pattern. Usually such patterns are used by string-searching algorithms for "find" or "find and replace" operations on strings. It also looks for input validations. It is a technique commonly developed in theoretical computer science. I will Take the following example of a regular expression, which we’ll call `Matching an Email`:
 
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+
+This series of characters are a search pattern that checks to see if a string fullfillss the requirements for a basic email.
+* Considered a literal, so the pattern must be wrapped in slash characters (/).
+*  matches one or more letters, digits, dots, and/or hyphens.
+* The string can contain any lowercase letter between a–z.
+* The string can contain any number between 0–9.
+* The string can contain an underscore and hyphen.
+* There must be a period (‘.’) `\.` at period with backslash.
+* Finally, the email address must end with two to six alphabets or dots`([a-z\.]{2,6})`.
+The below content will explain what each section of this code does and more in detail.
+
 ## Table of Contents
 
 - [Anchors](#anchors)
@@ -113,3 +125,9 @@ The backslash (\) in a regex escapes a character that otherwise would be interpr
 
 Dereje Ayele: University of Richmond Coding Bootcamp Student                                                 
 GitHub: https://github.com/dereatom
+
+### Referances
+
+https://www.youtube.com/watch?v=7DG3kCDx53c
+https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
