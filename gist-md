@@ -1,4 +1,4 @@
-# Regex-Tutorial
+# RegEx Tutorial
 
 As a web development student, I want develope a tutorial explaining a specifics of regex so that we can understand the search pattern of  the regex defines. To create a tutorial that explains how a specific regular expression, or regex, functions by breaking down each part of the expression and describing what it does. I'll use the template provided in the starter code to create my walkthrough.
 
@@ -103,7 +103,7 @@ likely to encounter:
 * Multiline m will cause the beginning and end anchors to match the start and end of a line instead of the     whole string.
 * Unicode u allows extended unicode escapes in the form \x{FFFFF}.
 * Sticky y will only match from its last index position and ignores the global search flag.
-* Dot all s causes dot (.) to match any character.
+* Dotall s causes dot (.) to match any character.
 
 ### Character Escapes
 
