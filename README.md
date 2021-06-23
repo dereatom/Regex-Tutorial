@@ -112,5 +112,5 @@ The backslash (\) in a regex escapes a character that otherwise would be interpr
 ## Author
 
 Dereje Ayele: University of Richmond Coding Bootcamp Student                                                 
-GitHub: https://github.com/dereatom
+GitHub: https://github.com/dereatom                                                                                    
 Gist github link: https://github.com/dereatom/Regex-Tutorial/edit/main/README.md
